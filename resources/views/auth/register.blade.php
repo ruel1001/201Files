@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ $title }} | Andis Dev</title>
+    <title>Maigo Faculty 201 Files</title>
 
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -14,7 +14,7 @@
     {{-- <link rel="stylesheet" href="/assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css"> --}}
 
     <link rel="stylesheet" href="/assets/dist/css/adminlte.min.css">
-
+    <link rel="stylesheet" href="/assets/dist/css/custom.css">
 </head>
 
 <body class="hold-transition register-page">
@@ -23,24 +23,57 @@
     <div class="register-box">
         <div class="card card-outline card-primary">
             <div class="card-header text-center">
-                <a href="/" class="h1"><b>Andis</b> Dev</a>
+                <a href="/" class="h1"><b>201 Files</b></a>
             </div>
             <div class="card-body">
-                <p class="login-box-msg">Register a new membership</p>
-                <form class="needs-validation" novalidate action="/register" method="POST">
+                <p class="login-box-msg">Register </p>
+                <form class="needs-validation" novalidate action="/hmo/register" method="POST">
                     @csrf
                     <div class="input-group mb-3">
-                        <input type="text" name="name" class="form-control @error('name') is-invalid @enderror"
-                            placeholder="Full name" value="{{ old('name') }}" required>
+                        <input type="text" name="first_name"
+                            class="form-control @error('first_name') is-invalid @enderror" placeholder="First"
+                            value="{{ old('first_name') }}" required>
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-user"></span>
                             </div>
                         </div>
-                        @error('name')
-                            <span class="invalid-feedback text-danger">{{ $message }}</span>
+                        @error('first_name')
+                        <span class="invalid-feedback text-danger">{{ $message }}</span>
                         @enderror
                     </div>
+
+
+                    <div class="input-group mb-3">
+                        <input type="text" name="middle_name"
+                            class="form-control @error('middle_name') is-invalid @enderror" placeholder="Middle name"
+                            value="{{ old('middle_name') }}" required>
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-user"></span>
+                            </div>
+                        </div>
+                        @error('middle_name')
+                        <span class="invalid-feedback text-danger">{{ $message }}</span>
+                        @enderror
+                    </div>
+
+
+                    <div class="input-group mb-3">
+                        <input type="text" name="last_name"
+                            class="form-control @error('last_name') is-invalid @enderror" placeholder="Last name"
+                            value="{{ old('last_name') }}" required>
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-user"></span>
+                            </div>
+                        </div>
+                        @error('last_name')
+                        <span class="invalid-feedback text-danger">{{ $message }}</span>
+                        @enderror
+                    </div>
+
+
                     <div class="input-group mb-3">
                         <input type="email" name="email" class="form-control @error('email') is-invalid @enderror"
                             placeholder="Email" value="{{ old('email') }}" required>
@@ -50,7 +83,7 @@
                             </div>
                         </div>
                         @error('email')
-                            <span class="invalid-feedback text-danger">{{ $message }}</span>
+                        <span class="invalid-feedback text-danger">{{ $message }}</span>
                         @enderror
                     </div>
                     <div class="input-group mb-3">
@@ -63,7 +96,7 @@
                             </div>
                         </div>
                         @error('password')
-                            <span class="invalid-feedback text-danger">{{ $message }}</span>
+                        <span class="invalid-feedback text-danger">{{ $message }}</span>
                         @enderror
                     </div>
                     <div class="input-group mb-3">
@@ -76,7 +109,7 @@
                             </div>
                         </div>
                         @error('passwordConfirm')
-                            <span class="invalid-feedback text-danger">{{ $message }}</span>
+                        <span class="invalid-feedback text-danger">{{ $message }}</span>
                         @enderror
                     </div>
                     <div class="row">
@@ -89,13 +122,15 @@
                             </div>
                         </div> --}}
 
-                        <div class="col-4">
+                        <div class="col-12">
                             <button type="submit" class="btn btn-primary btn-block">Register</button>
                         </div>
 
                     </div>
                 </form>
-                <a href="/login" class="text-center">I already have a membership</a>
+                <div class="col-12 text-center">
+                    <a href="/login">I already have a membership</a>
+                </div>
             </div>
 
         </div>
@@ -111,21 +146,21 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
-        (function() {
-            'use strict';
-            window.addEventListener('load', function() {
-                var forms = document.getElementsByClassName('needs-validation');
-                var validation = Array.prototype.filter.call(forms, function(form) {
-                    form.addEventListener('submit', function(event) {
-                        if (form.checkValidity() === false) {
-                            event.preventDefault();
-                            event.stopPropagation();
-                        }
-                        form.classList.add('was-validated');
-                    }, false);
-                });
-            }, false);
-        })();
+    (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+            var forms = document.getElementsByClassName('needs-validation');
+            var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
     </script>
 </body>
 

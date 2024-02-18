@@ -2579,11 +2579,30 @@ fieldset:disabled a.btn {
   pointer-events: none;
 }
 
+.align-middle {
+  vertical-align: middle;
+}
+.main-footer {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important; /* To center-align the copyright text */
+  height: 100vh !important; /* Optional: set the height to full viewport height */
+}
+
+.footer-content {
+  display: flex !important;
+  align-items: center !important;
+}
 .btn-primary {
   color: #fff;
   background-color: #007bff;
   border-color: #007bff;
   box-shadow: none;
+}
+
+.btn-with-space {
+  margin-left: 10px; /* Adjust this value to increase/decrease space */
 }
 
 .btn-primary:hover {

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ $title }} | Andis Dev </title>
+    <title>Maigo Faculty 201 Files</title>
 
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -14,6 +14,9 @@
     {{-- <link rel="stylesheet" href="/assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css"> --}}
 
     <link rel="stylesheet" href="/assets/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="/assets/dist/css/custom.css">
+
+
 
 </head>
 
@@ -25,10 +28,10 @@
 
         <div class="card card-outline card-primary">
             <div class="card-header text-center">
-                <a href="/" class="h1"><b>Andis</b> Dev</a>
+                <a href="/" class="h1"><b>201 Files</b></a>
             </div>
             <div class="card-body">
-                <p class="login-box-msg">Sign in to start your session</p>
+                <p class="login-box-msg">Login Faculty</p>
                 <form class="needs-validation" novalidate action="/login" method="POST">
                     @csrf
                     <div class="input-group mb-3">
@@ -54,21 +57,19 @@
                                 <label for="remember">
                                     Remember Me
                                 </label>
+
                             </div>
                         </div>
+                        <div class="col-3">
 
-                        <div class="col-4">
-                            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
                         </div>
-                        <p class="mb-0">
-                            <a href="/register" class="text-center">Register a new membership</a>
-                        </p>
                     </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                    <!-- <a href="/register" class="btn btn-link btn-block btn-register"><u>Register</u></a> -->
                 </form>
             </div>
-
         </div>
-
     </div>
 
     <script src="/assets/plugins/jquery/jquery.min.js"></script>
@@ -79,21 +80,21 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
-        (function() {
-            'use strict';
-            window.addEventListener('load', function() {
-                var forms = document.getElementsByClassName('needs-validation');
-                var validation = Array.prototype.filter.call(forms, function(form) {
-                    form.addEventListener('submit', function(event) {
-                        if (form.checkValidity() === false) {
-                            event.preventDefault();
-                            event.stopPropagation();
-                        }
-                        form.classList.add('was-validated');
-                    }, false);
-                });
-            }, false);
-        })();
+    (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+            var forms = document.getElementsByClassName('needs-validation');
+            var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
     </script>
 </body>
 
