@@ -137,7 +137,7 @@
                                             <label for="name">Citizenship</label>
                                             <input type="text" name="citizenship"
                                                 class="form-control @error('citizenship') is-invalid @enderror"
-                                                id="citizenship" placeholder="Citezenship"
+                                                id="citizenship" placeholder="Citizenship"
                                                 value="{{old('citizenship')}}" required>
                                             @error('citizenship')
                                             <span class="invalid-feedback text-danger">{{ $message }}</span>

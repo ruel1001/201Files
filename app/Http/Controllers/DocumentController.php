@@ -177,7 +177,7 @@ class DocumentController extends Controller
         $document->save();
 
         Alert::info('Success', 'Document has been approved!');
-        return redirect('/document');
+        return redirect('/hmo/dashboard');
     }
 
     public function disapproved_now(Request $request, string $document_id)
@@ -205,7 +205,7 @@ class DocumentController extends Controller
         $document->save();
 
         Alert::info('Success', 'Document has been disapproved!');
-        return redirect('/document');
+        return redirect('/hmo/dashboard');
     }
 
 
@@ -246,7 +246,7 @@ class DocumentController extends Controller
         $document->save();
 
         Alert::info('Success', 'Document has been updated!');
-        return redirect('/document');
+        return redirect('/hmo/dashboard');
     }
 
     /**
@@ -260,10 +260,10 @@ class DocumentController extends Controller
             $faculty->delete();
 
             Alert::error('Success', 'Documents has been deleted !');
-            return redirect('/document');
+            return redirect('/hmo/dashboard');
         } catch (Exception $ex) {
             Alert::warning('Error', 'Documents deleted, Barang already used !');
-            return redirect('/document  ');
+            return redirect('/hmo/dashboard  ');
         }
     }
 }
