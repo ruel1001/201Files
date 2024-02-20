@@ -38,8 +38,8 @@
                     <div class="card">
                         <div class="card-header">
                             <div class="text-right">
-                                <a href="/faculty" class="btn btn-warning btn-sm"><i
-                                        class="fa-solid fa-arrow-rotate-left"></i>
+                                <a href="/document/{{ auth()->user()->email }}/mydocument"
+                                    class="btn btn-warning btn-sm"><i class="fa-solid fa-arrow-rotate-left"></i>
                                     Back
                                 </a>
                             </div>
