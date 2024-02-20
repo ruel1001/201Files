@@ -13,7 +13,6 @@
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="/">Home</a></li>
-                        <li class="breadcrumb-item"><a href="/faculty">Faculty</a></li>
                         <li class="breadcrumb-item active">@yield('title')</li>
                     </ol>
                 </div><!-- /.col -->
@@ -31,7 +30,7 @@
                     <div class="card">
                         <div class="card-header">
                             <div class="text-right">
-                                <a href="/faculty" class="btn btn-warning btn-sm"><i
+                                <a href="/dashboard" class="btn btn-warning btn-sm"><i
                                         class="fa-solid fa-arrow-rotate-left"></i>
                                     Back
                                 </a>

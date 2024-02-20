@@ -1,4 +1,10 @@
+@if(auth()->user()->user_type === 'hmo')
 @extends('template.hrmain')
+@endif
+
+@if(auth()->user()->user_type === 'faculty')
+@extends('template.main')
+@endif
 @section('title', 'Add Document')
 @section('content')
 

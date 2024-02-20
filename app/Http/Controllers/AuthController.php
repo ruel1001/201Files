@@ -2,17 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use RealRashid\SweetAlert\Facades\Alert;
 use App\Models\User;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class AuthController extends Controller
 {
     public function index()
     {
-        
+
         return view('auth.hrlogin', [
             'title' => 'Login',
         ]);
@@ -61,7 +62,7 @@ class AuthController extends Controller
             'last_name' => 'required',
             'email' => 'required|unique:users',
             'password' => 'required',
-            'passwordConfirm' => 'required|same:password'
+            'passwordConfirm' =>    'required|same:password'
         ]);
 
         $validated['password'] = Hash::make($request['password']);

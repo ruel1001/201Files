@@ -129,7 +129,7 @@
                     </div>
                 </form>
                 <div class="col-12 text-center">
-                    <a href="/login">I already have a membership</a>
+                    <a href="/login">Already have account?</a>
                 </div>
             </div>
 
