@@ -30,8 +30,18 @@
                     <div class="card">
                         <div class="card-header">
                             <div class="text-right">
-                                <a href="/document/create" class="btn btn-primary"><i class="fa-solid fa-plus"></i> Add
+
+                                @if(auth()->user()->user_type == 'hmo')
+                                <a href="/dashboard/create" class="btn btn-primary"><i class="fa-solid fa-plus"></i> Add
                                     Document</a>
+                                @endif
+
+                                @if(auth()->user()->user_type == 'faculty')
+                                <a href="/documentf" class="btn btn-primary"><i class="fa-solid fa-plus"></i>
+                                    Add
+                                    Document</a>
+                                @endif
+
                             </div>
                         </div>
                         <!-- /.card-header -->

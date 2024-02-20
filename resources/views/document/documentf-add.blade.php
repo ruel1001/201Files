@@ -1,4 +1,4 @@
-@extends('template.hrmain')
+@extends('template.main')
 
 
 @section('title', 'Add Document')

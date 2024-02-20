@@ -52,6 +52,7 @@ Route::get('/faculty/{email}/profile', [FacultyController::class, 'profile'])->m
 
 //Document
 Route::resource('/document', DocumentController::class)->middleware('auth');
+Route::get('/documentf', [DocumentController::class, 'documentf'])->middleware('auth');
 Route::get('/hrdocument', [DocumentController::class, 'hrdocument'])->middleware('auth');
 Route::get('/document/{email}/mydocument', [DocumentController::class, 'mydocument'])->middleware('auth');
 Route::get('/document/{document_name}/download', [DocumentController::class, 'download'])->middleware('auth');

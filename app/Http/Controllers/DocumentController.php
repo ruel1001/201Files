@@ -39,6 +39,10 @@ class DocumentController extends Controller
             'documenttypes' => $documenttypes
         ]);
     }
+    public function documentf  ()
+    {
+        return view('document.documentf-add');
+    }
 
 
 
